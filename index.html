@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TP 2</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&family=Work+Sans:wght@100..900&display=swap');
+
+    /* Estilos CSS omitidos por concisión */
+  </style>
+</head>
+<body>
+  <nav>
+    <h1 class="move-animation">M. Florencia Segovia</h1>
+    <div id="navega">
+      <a href="index.html">home</a>
+      <a href="https://www.instagram.com/florsego_/" target="_blank">Instagram</a>
+      <a href="https://www.behance.net/florencsegovia2" target="_blank">Behance</a>
+    </div>
+    <span id="menu" class="icon-menu"></span>
+  </nav>
+
+  <header>
+    <h3>Trabajos</h3>
+    <h1>Portfolio</h1>
+    <p>Soy Maria Florencia Segovia, estudiante de la carrera de Diseño Integral, dictada en la universidad Torcuatto di Tella. Estoy en mi tercer año y, a continuación, mostrare algunos de mis trabajos realizados a lo largo de estos 3 años.</p>
+    <a href="mailto:florenciasegovia2003@gmail.com">Enviarme email</a>
+  </header>
+
+  <main>
+    <h2>Imágenes</h2>
+    <section>
+      <div>
+        <a href="imagenes/Imagen1.JPG" data-lightbox="galeria" data-title="Imagen1">
+          <img src="imagenes/Imagen1.JPG" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="imagenes/Imagen2.JPG" data-lightbox="Imagen2">
+          <img src="imagenes/Imagen2.JPG" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="imagenes/Imagen3.jpg" data-lightbox="Imagen3">
+          <img src="imagenes/Imagen3.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="imagenes/Imagen4.jpg" data-lightbox="Imagen4">
+          <img src="imagenes/Imagen4.jpg" alt="">
+        </a>
+      </div>
+    </section>
+    <h2>Video</h2>
+    <h3>Trabajo con corte láser</h3>
+    <section>
+      <div class="video-container">
+        <video id="miVideo" src="videos/video01.mov"></video>
+        <button id="boton" class="icon-play"></button>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
+  <script>
+    document.getElementById('menu').addEventListener('click', function () {
+      document.getElementById('navega').classList.toggle('mostrar');
+    });
+
+    lightbox.option({
+      'wrapAround': true,
+      'albumLabel': "Imagen %1 de %2",
+      'fadeDuration': 2000,
+      'maxWidth': 800, // Ajusta el valor según tus necesidades
+      'maxHeight': 600, // Ajusta el valor según tus necesidades
+      'showImageNumberLabel': true,
+      'alwaysShowNavOnTouchDevices': true
+    });
+
+    document.getElementById('boton').addEventListener('click', function () {
+      if (document.getElementById('miVideo').paused)
+        document.getElementById('miVideo').play();
+      else
+        document.getElementById('miVideo').pause();
+    });
+  </script>
+</body>
+</html>
